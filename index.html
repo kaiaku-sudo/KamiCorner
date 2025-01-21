@@ -128,8 +128,8 @@
             <img src="2-reverse.jpg" alt="Natu Reverse">
             <div class="card-content">
                 <h3>Reverse</h3>
-                <p class="price">0,04 €/cad.</p>
-		<h1>1kg = 514 carte</h1>
+                <p class="price">0,05 €/cad.</p>
+		<h1>1kg = 516 carte</h1>
                 <label>Kg. <input type="number" min="0" class="kg"></label>
                 <label>Q.tà <input type="number" min="0" class="qty"></label>
                 <button onclick="calculateReversebykg(this)">Kg</button>
@@ -143,8 +143,8 @@
             <img src="3-holo.jpg" alt="Omastar Holo">
             <div class="card-content">
                 <h3>Holo</h3>
-                <p class="price">0,05 €/cad.</p>
-		<h1>1kg = 516 carte</h1>
+                <p class="price">0,04 €/cad.</p>
+		<h1>1kg = 514 carte</h1>
                 <label>Kg. <input type="number" min="0" class="kg"></label>
                 <label>Q.tà <input type="number" min="0" class="qty"></label>
                 <button onclick="calculateHolobykg(this)">Kg</button>
@@ -190,27 +190,27 @@
 
         function calculateReversebykg(button) {
             const card = button.closest('.card');
-            const kg = parseFloat(card.querySelector('.kg').value)/0.0019455252918288 || 0;
-            const result = (kg * 0.04) ;
+            const kg = parseFloat(card.querySelector('.kg').value)/0.001937984496124 || 0;
+            const result = (kg * 0.05) ;
             card.querySelector('.output').textContent = result.toFixed(2);
         }
 		function calculateReversebyqty(button) {
             const card = button.closest('.card');
             const qty = parseFloat(card.querySelector('.qty').value) || 0;
-            const result = (qty * 0.04) ;
+            const result = (qty * 0.05) ;
             card.querySelector('.output').textContent = result.toFixed(2);
         }
 
         function calculateHolobykg(button) {
             const card = button.closest('.card');
-            const kg = parseFloat(card.querySelector('.kg').value)/0.001937984496124 || 0;
-            const result = (kg * 0.05) ;
+            const kg = parseFloat(card.querySelector('.kg').value)/0.0019455252918288 || 0;
+            const result = (kg * 0.04) ;
             card.querySelector('.output').textContent = result.toFixed(2);
         }
 		function calculateHolobyqty(button) {
             const card = button.closest('.card');
             const qty = parseFloat(card.querySelector('.qty').value) || 0;
-            const result = (qty * 0.05) ;
+            const result = (qty * 0.04) ;
             card.querySelector('.output').textContent = result.toFixed(2);
         }
 
