@@ -166,10 +166,12 @@
 
         <!-- Card 4: Ultra Rare -->
         <div class="card">
-            <img src="5-ultra-rare.jpg" alt="Torterra Ultra Rare">
+            <img src="yugi.jpg" alt="yugioh bulk">
             <div class="card-content">
-                <h3>Ultra Rare</h3>
-                <p class="price">0,50 €/cad.</p>
+                <h3>Yu-gi-oh! bulk</h3>
+                <p class="price">0,1 €/cad.</p>
+		<h4>1kg = 551 carte</h4>
+
                 <label>Kg. <input type="number" min="0" class="kg"></label>
                 <label>Q.tà <input type="number" min="0" class="qty"></label>
                 <button onclick="calculateUltraRarebykg(this)">Kg</button>
@@ -226,14 +228,14 @@
 
         function calculateUltraRarebykg(button) {
             const card = button.closest('.card');
-            const kg = parseFloat(card.querySelector('.kg').value)/0.0019646365422396855 || 0;
-            const result = (kg * 0.5) ;
+            const kg = parseFloat(card.querySelector('.kg').value)/0.0018148820326679 || 0;
+            const result = (kg * 0.01) ;
             card.querySelector('.output').textContent = result.toFixed(2);
         }
 		function calculateUltraRarebyqty(button) {
             const card = button.closest('.card');
             const qty = parseFloat(card.querySelector('.qty').value) || 0;
-            const result = (qty * 0.5) ;
+            const result = (qty * 0.01) ;
             card.querySelector('.output').textContent = result.toFixed(2);
         }
 		function calculateTotalSum() {
